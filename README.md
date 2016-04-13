@@ -2,8 +2,6 @@
 
 作者：[Ron Zacharski](http://zacharski.org/) [![CC BY-NC 3.0](http://i.creativecommons.org/l/by-nc/3.0/80x15.png)](http://creativecommons.org/licenses/by-nc/3.0/deed.en_US)
 
-![](./images/zen-logo-thumb.png)
-
 https://github.com/egrcc/guidetodatamining
 
 原文 <http://guidetodatamining.com/>
