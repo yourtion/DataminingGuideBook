@@ -16,6 +16,10 @@ https://github.com/egrcc/guidetodatamining
 
 这本指南采用“边学边做”的方式编写，因此在阅读本书时，我强烈建议您动手实践每一章结束提供的练习题和实验题，使用书中的Python脚本将其运行起来。书中有一系列展示数据挖掘技术的实例，因此在阅读完本书后，你就能掌握这些技术了。这本书以Creative Commons协议发布，可以免费下载。你可以任意分发这本书的副本，或者重新组织它的内容。也许将来我会提供一本纸质的书籍，不过这里的在线版本永远是免费的。
 
+## 源码
+
+[DataminingGuideBook-Codes](https://github.com/yourtion/DataminingGuideBook-Codes)
+
 ## GitBook 排版
 
 **Yourtion**
