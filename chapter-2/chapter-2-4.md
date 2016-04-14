@@ -247,7 +247,7 @@ class recommender:
 
 ### 新的数据集
 
-现在让我们使用一个更为真实的数据集。Cai-Nicolas Zeigler从图书漂流站收集了超过100万条评价数据——278,858位用户为271,379本书打了分。这份数据（匿名）可以从[这个地址](http://www.informatik.uni-freiburg.de/~cziegler/BX/)获得，有SQL和CSV两种格式。由于特殊符号的关系，这些数据无法直接加载到Python里。我做了一些清洗，可以从[这里下载](http://guidetodatamining.com/guide/ch2/BX-Dump.zip)。
+现在让我们使用一个更为真实的数据集。Cai-Nicolas Zeigler从图书漂流站收集了超过100万条评价数据——278,858位用户为271,379本书打了分。这份数据（匿名）可以从[这个地址](http://www.informatik.uni-freiburg.de/~cziegler/BX/)获得，有SQL和CSV两种格式。由于特殊符号的关系，这些数据无法直接加载到Python里。我做了一些清洗，可以从[这里下载](http://guidetodatamining.com/assets/data/BX-Dump.zip)。
 
 CSV文件包含了三张表：
 
@@ -270,4 +270,4 @@ CSV文件包含了三张表：
 只有运行调试过书中的代码后才能真正掌握这些方法，以下是一些实践建议：
 
 1. 实现一个计算曼哈顿距离和欧几里得距离的方法；
-2. 本书的网站上有一个包含25部电影评价的[数据集](http://guidetodatamining.com/guide/ch2/Movie_Ratings.csv)，实现一个推荐算法。
+2. 本书的网站上有一个包含25部电影评价的[数据集](http://guidetodatamining.com/assets/data/Movie_Ratings.csv)，实现一个推荐算法。
