@@ -1,10 +1,17 @@
 # 《面向程序员的数据挖掘指南》
 
-作者：[Ron Zacharski](http://zacharski.org/) [![CC BY-NC 3.0](http://i.creativecommons.org/l/by-nc/3.0/80x15.png)](http://creativecommons.org/licenses/by-nc/3.0/deed.en_US)
-
+作者：[Ron Zacharski](http://zacharski.org/) [CC BY-NC 3.0](http://i.creativecommons.org/l/by-nc/3.0/80x15.png)]
 https://github.com/egrcc/guidetodatamining
 
 原文 <http://guidetodatamining.com/>
+
+译文来自 [@egrcc](https://github.com/egrcc/) 的 https://github.com/egrcc/guidetodatamining
+
+根据译文做了排版优化，修正部分错误问题，支持语法高亮。
+
+下载电子书: https://www.gitbook.com/book/yourtion/dataminingguide/details
+
+直接下载：[PDF](https://www.gitbook.com/download/pdf/book/yourtion/dataminingguide)、[EPub](https://www.gitbook.com/download/epub/book/yourtion/dataminingguide)、[Mobi](https://www.gitbook.com/download/mobi/book/yourtion/dataminingguide)
 
 ## 欢迎辞
 
@@ -24,4 +31,4 @@ https://github.com/egrcc/guidetodatamining
 - yourtion@gmail.com
 - https://github.com/yourtion
 
-**根据电子书做了部分章节的排版优化，支持语法高亮。如有修改建议优化，请直接Fork：<https://github.com/yourtion/DataminingGuideBook/> 进行修改并申请 Pull Request。**
+**如有修改建议优化，请直接Fork：<https://github.com/yourtion/DataminingGuideBook/> 进行修改并申请 Pull Request。**

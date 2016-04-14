@@ -1,8 +1,11 @@
 # 第二章：推荐系统入门
 
-原文：http://guidetodatamining.com/chapter-2/
+原文：http://guidetodatamining.com/chapter2/
+
+本章将介绍协同过滤，基本的距离算法，包括曼哈顿距离、欧几里得距离、闵科夫斯基距离、皮尔森相关系数。使用Python实现一个基本的推荐算法。
 
 内容：
+
 * 推荐系统工作原理
 * 社会化协同过滤工作原理
 * 如何找到相似物品

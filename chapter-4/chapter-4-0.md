@@ -1,7 +1,7 @@
 第四章：分类
 ============
 
-原文：http://guidetodatamining.com/chapter-4
+原文：http://guidetodatamining.com/chapter4
 
 在上几章中我们使用用户对物品的评价来进行推荐，这一章我们将使用物品本身的特征来进行推荐。这也是潘多拉音乐站所使用的方法。
 

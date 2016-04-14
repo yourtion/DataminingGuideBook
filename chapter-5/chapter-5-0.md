@@ -1,5 +1,15 @@
 第五章：进一步探索分类
 ======================
 
-原文：http://guidetodatamining.com/chapter-5
+原文：http://guidetodatamining.com/chapter5
 
+本章会讨论如何评价分类器的效果，方法包括十折交叉验证、留一法、以及Kappa检验等，同时还会引入kNN算法。
+
+内容：
+
+* 效果评估算法和kNN
+* 留一法
+* 混淆矩阵
+* 代码示例
+* Kappa指标
+* 优化近邻算法

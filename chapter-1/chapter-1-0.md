@@ -1,7 +1,9 @@
 第一章：简介
 ============
 
-原文链接：http://guidetodatamining.com/chapter-1/
+原文链接：http://guidetodatamining.com/chapter1/
+
+本章将讲述什么是数据挖掘，它所能解决的问题的是什么，以及在阅读完本书后，你可以做些什么。
 
 内容：
 

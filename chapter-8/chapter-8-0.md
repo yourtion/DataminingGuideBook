@@ -1,7 +1,15 @@
 第八章：聚类
 ============
 
-原文：http://guidetodatamining.com/chapter-8/
+原文：http://guidetodatamining.com/chapter8/
+
+内容：
+
+* 层次聚类法
+* 编写层次聚类算法
+* k-means聚类算法
+* 安然事件
+
 
 前几章我们学习了如何构建分类系统，使用的是已经标记好类别的数据集进行训练：
 

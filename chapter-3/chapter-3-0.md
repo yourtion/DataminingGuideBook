@@ -1,6 +1,6 @@
 # 第三章：隐式评价和基于物品的过滤算法
 
-原文：http://guidetodatamining.com/chapter-3/
+原文：http://guidetodatamining.com/chapter3/
 
 本章会从用户的评价类型开始讨论，包括显式评价（赞一下、踩一脚、五星评价等等）和隐式评价（比如在亚马逊上购买了MP3，我们可以认为他喜欢这个产品）。
 
