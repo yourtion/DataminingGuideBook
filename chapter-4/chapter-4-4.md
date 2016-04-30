@@ -1,12 +1,18 @@
 ## Python编码
 
-这次我们不将数据直接写在Python代码中，而是放到两个文本文件里：athletesTrainingSet.txt和athletesTestSet.txt。我会使用第一个文件中的数据来训练分类器，然后使用测试文件里的数据来进行评价。
+这次我们不将数据直接写在Python代码中，而是放到两个文本文件里：athletesTrainingSet.txt和athletesTestSet.txt。
+
+我会使用第一个文件中的数据来训练分类器，然后使用测试文件里的数据来进行评价。
 
 文件格式大致如下：
 
 ![](../img/chapter-4/chapter-4-35.png)
 
-文件中的每一行是一条完整的记录，字段使用制表符分隔。我要使用运动员的身高体重数据来预测她所从事的运动项目，也就是用第三、四列的数据来预测第二列的数据。运动员的姓名不会使用到，我们既不能通过运动员的姓名得知她参与的项目，也不会通过身高体重来预测运动员的姓名。
+文件中的每一行是一条完整的记录，字段使用制表符分隔。
+
+我要使用运动员的身高体重数据来预测她所从事的运动项目，也就是用第三、四列的数据来预测第二列的数据。
+
+运动员的姓名不会使用到，我们既不能通过运动员的姓名得知她参与的项目，也不会通过身高体重来预测运动员的姓名。
 
 ![](../img/chapter-4/chapter-4-36.png)
 
@@ -46,7 +52,9 @@
  ('Basketball', [72, 162], ['Brittainey Raven']), ...]
 ```
 
-这是我最认同的表示方式，因为它将不同类型的数据区别开来了，依次是分类、特征、备注。这里备注可能有多个，所以也用了一个列表来表示。以下是读取数据文件并转换成上述格式的函数：
+这是我最认同的表示方式，因为它将不同类型的数据区别开来了，依次是分类、特征、备注。这里备注可能有多个，所以也用了一个列表来表示。
+
+以下是读取数据文件并转换成上述格式的函数：
 
 ```python
 class Classifier:
@@ -91,7 +99,11 @@ class Classifier:
 
 ### 关于断言
 
-通常我们会将一个大的算法拆分成几个小的组件，并为每个组件编写一些单元测试，从而确保它能正常工作。很多时候，我们会先写单元测试，再写正式的代码。在我提供的[模板代码](https://github.com/yourtion/DataminingGuideBook-Codes/tree/master/chapter-4/testMedianAndASD.py)中已经编写了一些单元测试，摘录如下：
+通常我们会将一个大的算法拆分成几个小的组件，并为每个组件编写一些单元测试，从而确保它能正常工作。
+
+很多时候，我们会先写单元测试，再写正式的代码。在我提供的[模板代码](https://github.com/yourtion/DataminingGuideBook-Codes/tree/master/chapter-4/testMedianAndASD.py)中已经编写了一些单元测试
+
+摘录如下：
 
 ```python
 def unitTest():
@@ -113,7 +125,9 @@ def getMedian(self, alist):
     return 0
 ```
 
-这个模板函数返回的是0，你需要编写代码来返回列表的中位数。比如单元测试中我传入了以下列表：
+这个模板函数返回的是0，你需要编写代码来返回列表的中位数。
+
+比如单元测试中我传入了以下列表：
 
 ```python
 [54, 72, 78, 49, 65, 63, 75, 67, 54]
@@ -154,7 +168,7 @@ def getMedian(self, alist):
     else:
         # 列表有偶数个元素，返回中间两个元素的均值
         v1 = blist[int(length / 2)]
-        v2 =blist[(int(length / 2) - 1)]
+        v2 = blist[(int(length / 2) - 1)]
         return (v1 + v2) / 2.0
 
 def getAbsoluteStandardDeviation(self, alist, median):
@@ -165,7 +179,9 @@ def getAbsoluteStandardDeviation(self, alist, median):
     return sum / len(alist)
 ```
 
-可以看到，getMedian函数对列表进行了排序，由于数据量并不大，所以这种方式是可以接受的。如果要对代码进行优化，我们可以使用[选择算法](http://en.wikipedia.org/wiki/Selection_algorithm)。
+可以看到，getMedian函数对列表进行了排序，由于数据量并不大，所以这种方式是可以接受的。
+
+如果要对代码进行优化，我们可以使用[选择算法](http://en.wikipedia.org/wiki/Selection_algorithm)。
 
 现在，我们已经将数据从athletesTrainingSet.txt读取出来，并保存为以下形式：
 
@@ -190,11 +206,11 @@ def getAbsoluteStandardDeviation(self, alist, median):
 在init方法中，添加标准化过程：
 
 ```python
-    # 获取向量的长度
-    self.vlen = len(self.data[0][1])
-    # 标准化
-    for i in range(self.vlen):
-        self.normalizeColumn(i)
+# 获取向量的长度
+self.vlen = len(self.data[0][1])
+# 标准化
+for i in range(self.vlen):
+    self.normalizeColumn(i)
 ```
 
 在for循环中逐列进行标准化，即第一次会标准化身高，第二次标准化体重。
@@ -216,7 +232,9 @@ def normalizeColumn(self, columnNumber):
         v[1][columnNumber] = (v[1][columnNumber] - median) / asd
 ```
 
-可以看到，我将计算得到的中位数和绝对偏差保存在了medianAndDeviation变量中，因为我们会用它来标准化需要预测的向量。比如，我要预测Kelly Miller的运动项目，她身高5尺10寸（70英寸），重140磅，即原始向量为[70, 140]，需要先进行标准化。
+可以看到，我将计算得到的中位数和绝对偏差保存在了medianAndDeviation变量中，因为我们会用它来标准化需要预测的向量。
+
+比如，我要预测Kelly Miller的运动项目，她身高5尺10寸（70英寸），重140磅，即原始向量为[70, 140]，需要先进行标准化。
 
 我们计算得到的meanAndDeviation为：
 
@@ -279,7 +297,9 @@ def nearestNeighbor(self, itemVector):
 
 ![](../img/chapter-4/chapter-4-41.png)
 
-在完整的[示例代码](https://github.com/yourtion/DataminingGuideBook-Codes/tree/master/chapter-4/nearestNeighborClassifier.py#L188)中，我提供了一个test函数，它可以对分类器程序的准确性做一个评价。比如用它来评价上面实现的分类器：
+在完整的[示例代码](https://github.com/yourtion/DataminingGuideBook-Codes/tree/master/chapter-4/nearestNeighborClassifier.py#L188)中，我提供了一个test函数，它可以对分类器程序的准确性做一个评价。
+
+比如用它来评价上面实现的分类器：
 
 ```
 -         Track  Aly Raisman  Gymnastics  62  115
@@ -296,7 +316,9 @@ def nearestNeighbor(self, itemVector):
 
 ### 鸢尾花数据集
 
-我们可以用鸢尾花数据集做测试，这个数据集在数据挖掘领域是比较有名的。它是20世纪30年代Ronald Fisher对三种鸢尾花的50个样本做的测量数据（萼片和花瓣）。
+我们可以用鸢尾花数据集做测试，这个数据集在数据挖掘领域是比较有名的。
+
+它是20世纪30年代Ronald Fisher对三种鸢尾花的50个样本做的测量数据（萼片和花瓣）。
 
 ![](../img/chapter-4/chapter-4-42.png)
 
@@ -304,7 +326,7 @@ def nearestNeighbor(self, itemVector):
 
 ![](../img/chapter-4/chapter-4-43.png)
 
-鸢尾花数据集可以在[这里](https://github.com/yourtion/DataminingGuideBook-Codes/tree/master/chapter-4/irisTrainingSet.data)找到，你可以测试你的算法，并问自己一些问题：标准化让结果更正确了吗？训练集中的数据量越多越好吗？用欧几里得距离来算会怎样？
+鸢尾花数据集可以在这里[irisTrainingSet](https://raw.githubusercontent.com/yourtion/DataminingGuideBook-Codes/master/chapter-4/irisTrainingSet.data)、[irisTestSet](https://raw.githubusercontent.com/yourtion/DataminingGuideBook-Codes/master/chapter-4/irisTestSet.data)找到，你可以测试你的算法，并问自己一些问题：标准化让结果更正确了吗？训练集中的数据量越多越好吗？用欧几里得距离来算会怎样？
 
 *记住* 所有的学习过程都是在你自己的脑中进行的，你付出的努力越多，学到的也就越多。
 
@@ -321,5 +343,6 @@ def nearestNeighbor(self, itemVector):
 93.33% correct
 ```
 
-这又一次证明我们的分类算法是简单有效的。有趣的是，如果不对数据进行标准化，它的准确率将达到100%。这个现象我们会在后续的章节中讨论。
+这又一次证明我们的分类算法是简单有效的。
 
+有趣的是，如果不对数据进行标准化，它的准确率将达到100%。这个现象我们会在后续的章节中讨论。

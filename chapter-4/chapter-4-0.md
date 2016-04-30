@@ -16,3 +16,12 @@
 * 一个和体育相关的示例
 * 特征值抽取方式一览
 
+数据集：
+
+- [athletesTrainingSet.txt](https://raw.githubusercontent.com/yourtion/DataminingGuideBook-Codes/master/chapter-4/athletesTrainingSet.txt)
+- [athletesTestSet.txt](https://raw.githubusercontent.com/yourtion/DataminingGuideBook-Codes/master/chapter-4/athletesTestSet.txt)
+- [irisTrainingSet.data](https://raw.githubusercontent.com/yourtion/DataminingGuideBook-Codes/master/chapter-4/irisTrainingSet.data)
+- [irisTestSet.data](https://raw.githubusercontent.com/yourtion/DataminingGuideBook-Codes/master/chapter-4/irisTestSet.data)
+- [mpgTrainingSet.txt](https://raw.githubusercontent.com/yourtion/DataminingGuideBook-Codes/master/chapter-4/mpgTrainingSet.txt)
+- [mpgTestSet.txt](https://raw.githubusercontent.com/yourtion/DataminingGuideBook-Codes/master/chapter-4/mpgTestSet.txt)
+
