@@ -8,7 +8,7 @@
 
 ```python
 # -*- coding: utf-8 -*-
-
+# 
 # 将数据等分成十份的示例代码
 
 import random
@@ -101,7 +101,7 @@ class Classifier:
         并留出testBucketNumber指定的桶来做测试集，其余的做训练集。
         dataFormat用来表示数据的格式，如：
         "class    num    num    num    num    num    comment"
-    """
+        """
    
         self.medianAndDeviation = []
         
@@ -233,7 +233,7 @@ def tenfold(bucketPrefix, dataFormat):
     print("total of %i instances" % total)
 
 # 调用方法
-tenfold("mpgData/mpgData",        "class    num num num num num comment")
+tenfold("mpgData/mpgData", "class num num num num num comment")
 ```
 
 执行结果如下：
