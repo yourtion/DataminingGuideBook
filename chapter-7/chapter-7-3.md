@@ -58,4 +58,3 @@ P(dislike)×P(I|dislike)×P(am|dislike)×P(stunned|dislike)×...
 
 * b<sup>n</sup> = x 可以转换为 log<sub>b</sub>x = n
 * log<sub>10</sub>(ab) = log<sub>10</sub>(a) + log<sub>10</sub>(b)
-
